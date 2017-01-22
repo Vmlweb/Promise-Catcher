@@ -1,0 +1,28 @@
+{
+  "name": "promise-catcher",
+  "version": "0.1.3",
+  "description": "Simple ES6 promise try catch wrapper for throw or callbacks.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vmlweb/Vladiator.git"
+  },
+  "keywords": [
+    "es6",
+    "promise",
+    "try",
+    "catch",
+    "wrap",
+    "throw",
+    "callback",
+    "express",
+    "jasmine"
+  ],
+  "author": "Victor Leach <mail@vmlweb.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vmlweb/Vladiator/issues"
+  },
+  "homepage": "https://github.com/Vmlweb/Vladiator#readme"
+}
