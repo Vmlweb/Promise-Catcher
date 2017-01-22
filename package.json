@@ -1,6 +1,6 @@
 {
   "name": "promise-catcher",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "Simple ES6 promise try catch wrapper for throw or callbacks.",
   "main": "index.js",
   "types": "index.d.ts",

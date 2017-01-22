@@ -118,7 +118,7 @@ module.exports.jasmine = function(execute){
 		return done => {
 			execute(done).catch(err => {
 				expect(err).not.toBeDefined()
-				throw err
+				done()
 			})
 		}
 	}else{
