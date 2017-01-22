@@ -1,4 +1,4 @@
-# The Vladiator
+# Promise Catcher
 
 Simple ES6 promise try catch wrapper for throw or callbacks. Suggestions are welcome.
 
@@ -96,8 +96,8 @@ describe('Test', catcher.jasmine(async done => {
 ```
 ```javascript
 //Use with any callbacks
-catcher.wrap(...)
+catcher.wraps(...)
 
 //Use with any throwing
-catcher.throw(...)
+catcher.throws(...)
 ```

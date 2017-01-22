@@ -1,4 +1,4 @@
-module.exports.wrap = function(execute){
+module.exports.wraps = function(execute){
 
 	//Check whether input is single or multi part
 	if (execute instanceof Array){
@@ -35,7 +35,7 @@ module.exports.wrap = function(execute){
 	}
 }
 
-module.exports.throw = function(execute){
+module.exports.throws = function(execute){
 
 	//Check whether input is single or multi part
 	if (execute instanceof Array){
