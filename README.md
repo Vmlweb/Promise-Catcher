@@ -26,7 +26,7 @@ When using ES6 promises with packages that do not catch your async rejections yo
 (node:) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id:): RequestError:
 ```
 
-To solve this we need to wrap our calls in try catch statements to make sure we are handling them correctly something like this.
+To solve this we need to wrap our calls in try catch statements to make sure we are handling them correctly.
 
 ```javascript
 //Using callbacks in express
@@ -45,7 +45,8 @@ app.get('/url', () => {
 		next()
 	}
 }())
-
+```
+```javascript
 //Using throws in jasmine
 describe('Test', () => {
 	it('test', () => {
@@ -81,7 +82,8 @@ app.get('/url', catcher.express(async (req, res, next) => {
 	
 	next()
 }))
-
+```
+```javascript
 //Using throws in jasmine
 describe('Test', catcher.jasmine(async done => {
 
@@ -91,7 +93,8 @@ describe('Test', catcher.jasmine(async done => {
 
 	done()
 }))
-
+```
+```javascript
 //Use with any callbacks
 catcher.wrap(...)
 
