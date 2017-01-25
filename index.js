@@ -4,13 +4,13 @@ module.exports.wraps = function(execute){
 	if (execute instanceof Array){
 		
 		//Return array of try catch wrapped executors
-		const items = []
-		for (const i in execute){
+		var items = []
+		for (var i in execute){
 			if (execute.hasOwnProperty(i) && execute[i] instanceof Function){
 				
 				//Generate callback promise catcher with custom arguments
-				items.push((...args) => {
-					item(...args).catch(err => {
+				items.push(function(...args){
+					item(...args).catch(function(err){
 						args[args.length-1](err)
 					})
 				})
@@ -24,8 +24,8 @@ module.exports.wraps = function(execute){
 		if (execute instanceof Function){
 			
 			//Generate callback promise catcher with custom arguments
-			return (...args) => {
-				execute(...args).catch(err => {
+			return fuction(...args){
+				execute(...args).catch(fuction(err){
 					args[args.length-1](err)
 				})
 			}
@@ -41,13 +41,13 @@ module.exports.throws = function(execute){
 	if (execute instanceof Array){
 		
 		//Return array of try catch wrapped executors
-		const items = []
-		for (const i in execute){
+		var items = []
+		for (var i in execute){
 			if (execute.hasOwnProperty(i) && execute[i] instanceof Function){
 				
 				//Generate throw promise catcher with custom arguments
-				items.push((...args) => {
-					item(...args).catch(err => {
+				items.push(fuction(...args){
+					item(...args).catch(fuction(err){
 						throw err
 					})
 				})
@@ -61,8 +61,8 @@ module.exports.throws = function(execute){
 		if (execute instanceof Function){
 			
 			//Generate throw promise catcher with custom arguments
-			return (...args) => {
-				execute(...args).catch(err => {
+			return fuction(...args){
+				execute(...args).catch(fuction(err){
 					throw err
 				})
 			}
@@ -78,13 +78,13 @@ module.exports.express = function(execute){
 	if (execute instanceof Array){
 		
 		//Return array of try catch wrapped executors
-		const items = []
-		for (const item in execute){
+		var items = []
+		for (var item in execute){
 			if (execute.hasOwnProperty(item) && execute instanceof Function){
 				
 				//Generate callback promise catcher with express arguments
-				items.push((req, res, next) => {
-					item(req, res, next).catch(err => {
+				items.push(fuction(req, res, next){
+					item(req, res, next).catch(fuction(err){
 						next(err)
 					})
 				})
@@ -98,8 +98,8 @@ module.exports.express = function(execute){
 		if (execute instanceof Function){
 			
 			//Generate callback promise catcher with express arguments
-			return (req, res, next) => {
-				execute(req, res, next).catch(err => {
+			return function(req, res, next){
+				execute(req, res, next).catch(fuction(err){
 					next(err)
 				})
 			}
@@ -115,8 +115,8 @@ module.exports.jasmine = function(execute){
 	if (execute instanceof Function){
 		
 		//Generate throw promise catcher with jasmine arguments and expect checker
-		return done => {
-			execute(done).catch(err => {
+		return fuction(done){
+			execute(done).catch(fuction(err){
 				expect(err).not.toBeDefined()
 				done()
 			})
