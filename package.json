@@ -1,9 +1,12 @@
 {
   "name": "promise-catcher",
-  "version": "0.1.9",
-  "description": "Simple ES6 promise try catch wrapper for throw or callbacks.",
+  "version": "0.3.8",
+  "description": "Simple ES6 promise try catch wrapper written in Typescript.",
   "main": "index.js",
   "types": "index.d.ts",
+  "scripts": {
+    "prepublish": "tsc -d index.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vmlweb/Vladiator.git"
@@ -24,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/Vmlweb/Vladiator/issues"
   },
-  "homepage": "https://github.com/Vmlweb/Vladiator#readme"
+  "homepage": "https://github.com/Vmlweb/Vladiator#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.41"
+  }
 }

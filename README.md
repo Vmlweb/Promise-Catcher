@@ -1,8 +1,6 @@
 # Promise Catcher
 
-Simple ES6 promise try catch wrapper for throw or callbacks. Suggestions are welcome.
-
-Includes Typescript definitions.
+Simple ES6 promise try catch wrapper written in Typescript. Suggestions are welcome.
 
 ## Installation
 
@@ -12,7 +10,7 @@ You can grab the latest version via NPM.
 npm install --save promise-catcher
 ```
 
-Then use require through NodeJS.
+Then use require through Typescript.
 
 ```javascript
 import * as catcher from 'promise-catcher'
