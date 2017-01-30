@@ -1,6 +1,6 @@
 # Promise Catcher
 
-Simple ES6 promise try catch wrapper written in Typescript. Suggestions are welcome.
+Simple promise try catch wrapper written in Typescript. Suggestions are welcome.
 
 ## Installation
 
@@ -83,7 +83,7 @@ app.get('/url', catcher.express(async (req, res, next) => {
 ```
 ```javascript
 //Using throws in jasmine
-describe('Test', catcher.jasmine(async done => {
+it('should work', catcher.jasmine(async done => {
 
 	if (problem){
 		throw new Error('message')
@@ -91,6 +91,16 @@ describe('Test', catcher.jasmine(async done => {
 
 	done()
 }))
+```
+```javascript
+//Using throws in jasmine testing angular async
+it('should work', async(inject([Service], catcher.angular(async (service: Service) => {
+
+	if (problem){
+		throw new Error('message')
+	}
+
+}))))
 ```
 ```javascript
 //Use with any callbacks
