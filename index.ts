@@ -1,3 +1,15 @@
+export function wait(time: number){
+	
+	//Create delay promise
+	return new Promise(resolve => {
+		
+		//Wait for specified time
+		setTimeout(() => {
+			resolve()
+		}, time)
+	})
+}
+
 export function wraps(execute: Function | Function[]){
 	
 	//Check whether input is single or multi part

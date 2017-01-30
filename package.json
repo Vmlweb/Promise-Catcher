@@ -1,11 +1,11 @@
 {
   "name": "promise-catcher",
-  "version": "0.3.8",
-  "description": "Simple ES6 promise try catch wrapper written in Typescript.",
+  "version": "0.4.0",
+  "description": "Simple promise try catch wrapper written in Typescript.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "prepublish": "tsc -d index.ts"
+    "prepublish": "tsc -d index.ts --lib dom,es6"
   },
   "repository": {
     "type": "git",
